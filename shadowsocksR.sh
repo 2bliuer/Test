@@ -312,10 +312,10 @@ pre_install(){
     char=`get_char`
     # Install necessary dependencies
     if check_sys packageManager yum; then
-        yum install -y python2 python2-devel python2-setuptools openssl openssl-devel curl wget unzip gcc automake autoconf make libtool
+        yum install -y python3 python3-devel python3-setuptools openssl openssl-devel curl wget unzip gcc automake autoconf make libtool
     elif check_sys packageManager apt; then
         apt-get -y update
-        apt-get -y install python2 python2-dev python2-setuptools openssl libssl-dev curl wget unzip gcc automake autoconf make libtool
+        apt-get -y install python3 python3-dev python3-setuptools openssl libssl-dev curl wget unzip gcc automake autoconf make libtool
     fi
     cd ${cur_dir}
 }
